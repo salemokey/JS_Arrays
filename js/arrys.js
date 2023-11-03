@@ -6,3 +6,11 @@ function task1 () {
     });
     console.log (Math.round(result))
 }
+function task2 () {
+    var arr = Array.from(Array(10),()=>{return Math.round(Math.random()*20)});
+    var result =arr.filter(index=>index>0&&index<10).reduce(function(sum,current)
+    {
+        return sum + current;
+    });
+    console.log (Math.round(result))
+}
