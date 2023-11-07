@@ -25,7 +25,7 @@ function task3 () {
                 arr.push(Number(x));
         }
         else alert ("введите корректное значение");
-        
+
         if (!confirm("Внести еще один элемент?")) {
             break; 
         }
@@ -36,3 +36,22 @@ function task3 () {
     var allEven = arr.every(index=>index%2==0);
     alert (allEven);
 }
+function task4 () {
+        var arr=[];
+        while(true)
+        {
+            var x=prompt("Введите число");
+            if (!isNaN(x))
+            {
+                if (x>0)
+                    arr.push(Number(x));
+            }
+            else alert ("введите корректное значение");
+    
+            if (!confirm("Внести еще один элемент?")) {
+                break; 
+            }
+        }
+        var allFive = arr.filter(index=>index%5==0);
+        console.log (allFive.toString());
+    }
