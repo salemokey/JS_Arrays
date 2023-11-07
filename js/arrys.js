@@ -14,3 +14,25 @@ function task2 () {
     });
     console.log (Math.round(result))
 }
+function task3 () {
+    var arr=[];
+    while(true)
+    {
+        var x=prompt("Введите число");
+        if (!isNaN(x))
+        {
+            if (x>0)
+                arr.push(Number(x));
+        }
+        else alert ("введите корректное значение");
+        
+        if (!confirm("Внести еще один элемент?")) {
+            break; 
+        }
+
+        
+
+    }
+    var allEven = arr.every(index=>index%2==0);
+    alert (allEven);
+}
