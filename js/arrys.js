@@ -55,3 +55,11 @@ function task4 () {
         var allFive = arr.filter(index=>index%5==0);
         console.log (allFive.toString());
     }
+    function task5 () {
+        var arr=[1,2,4,5,8];
+        var allNumbers = arr.reduce(function(sum,current) {
+         return sum + current
+        },0);
+        allNumbers /= arr.length;
+        console.log (allNumbers);
+    }
