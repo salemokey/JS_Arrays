@@ -63,3 +63,23 @@ function task4 () {
         allNumbers /= arr.length;
         console.log (allNumbers);
     }
+    function task6 () {
+        var arr=[];
+        while(true)
+        {
+            var x=prompt("Введите число");
+            if (!isNaN(x))
+            {
+                if (x>0)
+                    arr.push(Number(x));
+            }
+            else alert ("введите корректное значение");
+    
+            if (!confirm("Внести еще один элемент?")) {
+                break; 
+            }
+        }
+        x = arr.shift(x);
+        arr.push(x);
+        console.log (arr.toString());
+    }
