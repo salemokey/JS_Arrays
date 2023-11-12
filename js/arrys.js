@@ -125,3 +125,8 @@ function task4 () {
       console.log (nechetNum);
       console.log (Math.floor(chetNum / nechetNum));
     }
+    function task8 (num) {
+        let newNum = num.split('').map(elem => +elem + 1).join('');
+        console.log (newNum.toString());
+        return newNum;
+    }
