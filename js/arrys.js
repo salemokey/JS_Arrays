@@ -133,3 +133,44 @@ function task4 () {
     function task9 (arrString) {
         arrString = arrString.split(', ').filter(elem => elem.startsWith("http://"));
         console.log (arrString);}
+    function task10 () {
+        let data = [
+            {
+                1: 11,
+                2: 12,
+                3: 13,
+            },
+            {
+                1: 21,
+                2: 22,
+                3: 23,
+            },
+            {
+                1: 24,
+                2: 25,
+                3: 26,
+            },
+        ];  
+            let keysArr = [];
+            let valuesArr= [];
+            data.forEach(elem=> {Object.keys(elem).forEach(key=>
+                    {
+                        keysArr.push(key);
+                        valuesArr.push(elem[key]);
+                    });
+                });
+                console.log (keysArr);
+                console.log (valuesArr);
+                keysArr = keysArr.reduce (function(sum,current) {
+                        sum += +current;
+                        return sum;
+                }
+                ,0);
+                valuesArr =  valuesArr = valuesArr.reduce (function(sum,current) {
+                    sum += +current;
+                    return sum;
+            }
+            ,0);
+            console.log (keysArr);
+            console.log (valuesArr);
+            }
