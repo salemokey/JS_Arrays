@@ -83,3 +83,45 @@ function task4 () {
         arr.push(x);
         console.log (arr.toString());
     }
+    function task6 () {
+        var arr=[];
+        while(true)
+        {
+            var x=prompt("Введите число");
+            if (!isNaN(x))
+            {
+                if (x>0)
+                    arr.push(Number(x));
+            }
+            else alert ("введите корректное значение");
+    
+            if (!confirm("Внести еще один элемент?")) {
+                break; 
+            }
+        }
+        x = arr.shift(x);
+        arr.push(x);
+        console.log (arr.toString());
+    }
+    function task7 (length, min, max) {
+        let randomArray = [];
+        for (let i = 0; i < length; i++) {
+        randomArray.push(Math.floor(Math.random() * (max - min + 1)) + min);
+        }
+        console.log (randomArray);
+        chetNum = randomArray.reduce (function(sum,current,index) {
+            if (index%2==0) {
+            sum += current}
+            return sum;
+        }
+      ,0);
+      console.log (chetNum);
+      nechetNum = randomArray.reduce (function(sum,current,index) {
+        if (index%2!=0) {
+        sum += current}
+        return sum;
+    }
+  ,0);
+      console.log (nechetNum);
+      console.log (Math.floor(chetNum / nechetNum));
+    }
