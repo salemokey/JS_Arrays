@@ -130,3 +130,6 @@ function task4 () {
         console.log (newNum.toString());
         return newNum;
     }
+    function task9 (arrString) {
+        arrString = arrString.split(', ').filter(elem => elem.startsWith("http://"));
+        console.log (arrString);}
